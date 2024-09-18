@@ -21,9 +21,10 @@ public class GameController {
 
         do {
             race.startRace();
-            PrintResult(race);
+            PrintRaceResult(race);
         } while(!race.isGameOver());
 
+        PrintFinalResult(race);
     }
 
 }
