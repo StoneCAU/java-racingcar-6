@@ -11,7 +11,7 @@ public class GameController {
         Race race = InputView.InputCarNames();
 
         PrintMessage(ASK_NUMBER_OF_ATTEMPTS);
-        race.setAttempt(InputView.InputAttemptNumber());
+        race.setAttempt(Integer.parseInt(InputView.InputAttemptNumber()));
 
         play(race);
     }
