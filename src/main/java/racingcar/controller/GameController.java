@@ -17,6 +17,12 @@ public class GameController {
     }
 
     private static void play(Race race) {
+        PrintMessage(EXECUTION_RESULT);
+
+        do {
+            race.startRace();
+            PrintResult(race);
+        } while(!race.isGameOver());
 
     }
 

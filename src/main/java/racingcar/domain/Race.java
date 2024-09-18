@@ -6,7 +6,11 @@ import java.util.stream.Collectors;
 
 public class Race {
     private final List<Car> cars;
-    private int attempt;
+    private int attemptNum;
+
+    public List<Car> getCars() {
+        return cars;
+    }
 
     public Race(String carNames) {
         this.cars = convertCarList(carNames);
@@ -18,7 +22,16 @@ public class Race {
                 .collect(Collectors.toList());
     }
 
-    public void setAttempt(int attempt) {
-        this.attempt = attempt;
+    public void startRace() {
+        cars.forEach(Car::attempt);
+        attemptNum--;
+    }
+
+    public void setAttempt(int attemptNum) {
+        this.attemptNum = attemptNum;
+    }
+
+    public boolean isGameOver() {
+        return attemptNum == 0;
     }
 }
