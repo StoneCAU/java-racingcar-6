@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 public class Race {
     private final List<Car> cars;
+    private int attempt;
 
     public Race(String carNames) {
         this.cars = convertCarList(carNames);
@@ -15,5 +16,9 @@ public class Race {
         return Arrays.stream(carNames.split(","))
                 .map(Car::new)
                 .collect(Collectors.toList());
+    }
+
+    public void setAttempt(int attempt) {
+        this.attempt = attempt;
     }
 }

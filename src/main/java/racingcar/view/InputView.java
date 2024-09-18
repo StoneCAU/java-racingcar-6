@@ -10,4 +10,8 @@ public class InputView {
         String carNames = readLine();
         return new Race(carNames);
     }
+
+    public static Integer InputAttemptNumber() {
+        return Integer.parseInt(readLine());
+    }
 }
