@@ -32,13 +32,11 @@ public class OutputView {
     }
 
     private static String PrintLocation(int moveCount) {
-        String Location = "";
+        String Position;
 
-        for (int i = 0; i < moveCount; i++) {
-            Location += "-";
-        }
+        Position = "-".repeat(moveCount);
 
-        return Location;
+        return Position;
     }
 
     public static void PrintFinalResult(Race race) {

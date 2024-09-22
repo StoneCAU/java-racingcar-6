@@ -1,19 +1,18 @@
 package racingcar.view;
 
-import racingcar.domain.Race;
 import racingcar.validator.InputValidator;
 
 import static camp.nextstep.edu.missionutils.Console.readLine;
 
 
 public class InputView {
-    public static Race InputCarNames() {
+    public static String InputCarNames() {
         String carNames = readLine();
 
         InputValidator.validateCarNameLength(carNames);
         InputValidator.validateCarNameEmpty(carNames);
 
-        return new Race(carNames);
+        return carNames;
     }
 
     public static String InputAttemptNumber() {

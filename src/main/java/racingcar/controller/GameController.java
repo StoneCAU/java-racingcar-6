@@ -8,7 +8,9 @@ import static racingcar.view.OutputView.*;
 public class GameController {
     public void start() {
         PrintMessage(ASK_CAR_NAMES);
-        Race race = InputView.InputCarNames();
+        String carNames = InputView.InputCarNames();
+
+        Race race = new Race(carNames);
 
         PrintMessage(ASK_NUMBER_OF_ATTEMPTS);
         race.setAttempt(Integer.parseInt(InputView.InputAttemptNumber()));
